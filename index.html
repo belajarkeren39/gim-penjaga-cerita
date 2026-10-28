@@ -130,12 +130,12 @@
         .char-card .ce{font-family:'Press Start 2P',monospace;font-size:12px;color:#7CFC8A;margin:4px 0}
         .char-card p{font-family:'Nunito',sans-serif;font-weight:700;font-size:13px;line-height:1.3;color:#e2e8f0;margin:0 0 3px}
         .char-card .pk{color:#FFB347}
-        footer{height:120px!important;justify-content:center!important;padding-bottom:10px!important;align-items:flex-end!important}
-        footer>div:first-child{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);display:flex;flex-direction:row;align-items:flex-end;justify-content:center;gap:28px!important;width:max-content;pointer-events:none}
+        footer{height:100px!important;justify-content:center!important;padding-bottom:10px!important;align-items:flex-end!important}
+        footer>div:first-child{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);display:flex;flex-direction:row;align-items:flex-end;justify-content:center;gap:22px!important;width:max-content;pointer-events:none}
         footer>div:nth-child(2){position:absolute;left:24px;bottom:14px}
         footer>div:last-child{position:absolute;right:24px;bottom:14px}
-        #btn-left,#btn-right{width:132px!important;height:100px!important;font-size:42px!important;border-radius:18px!important;opacity:.92}
-        #btn-jump{height:100px!important;padding:0 72px!important;font-size:28px!important;margin-left:40px!important;opacity:.92}
+        #btn-left,#btn-right{width:104px!important;height:78px!important;font-size:34px!important;border-radius:18px!important;opacity:.92}
+        #btn-jump{height:78px!important;padding:0 54px!important;font-size:24px!important;margin-left:32px!important;opacity:.92}
         #btn-left,#btn-right,#btn-jump{touch-action:none;-webkit-tap-highlight-color:transparent}
         input{user-select:text!important;-webkit-user-select:text!important;outline:none}
         #player-name:focus{border-color:#fff!important;box-shadow:0 0 0 3px #FC9838}
@@ -530,7 +530,7 @@
         canvas.height = VIEW_HEIGHT * RS;
 
         let LEVEL_COLS = 72;     // diisi ulang oleh loadLevel()
-        const GROUND_ROW = 16;   // Baris tanah mulai di y = 16 * 32 = 512 (2 baris tanah sampai 576)
+        const GROUND_ROW = 14;   // Baris tanah mulai di y = 16 * 32 = 512 (2 baris tanah sampai 576)
 
         let gameState = 'START'; // START, PLAYING, PAUSED_QUIZ, FLAG_SLIDE, VICTORY
         let currentLevel = 0;
@@ -777,7 +777,7 @@
             for (let col = 0; col < LEVEL_COLS; col++) {
                 const inPit = pits.some(p => col >= p.startCol && col <= p.endCol);
                 if (!inPit) {
-                    for (let r = GROUND_ROW; r <= GROUND_ROW + 1; r++) {
+                    for (let r = GROUND_ROW; r <= 17; r++) {
                         solidBlocks.push({
                             col, row: r,
                             x: col * TILE, y: r * TILE,
